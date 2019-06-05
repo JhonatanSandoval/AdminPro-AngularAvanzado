@@ -6,12 +6,21 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { APP_ROUTES } from './app.routes';
 import { PagesModule } from './pages/pages.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ServiceModule } from './services/service.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent, LoginComponent, RegisterComponent],
-  imports: [BrowserModule, APP_ROUTES, PagesModule, FormsModule, ServiceModule],
+  imports: [
+    BrowserModule,
+    APP_ROUTES,
+    PagesModule,
+    FormsModule,
+    ServiceModule,
+    ReactiveFormsModule,
+    HttpClientModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

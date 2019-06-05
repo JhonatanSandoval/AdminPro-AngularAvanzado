@@ -2,20 +2,26 @@
   <div class="login-register" style="background-image:url(../assets/images/background/login-register.jpg);">
     <div class="login-box card">
       <div class="card-body">
-        <form class="form-horizontal form-material" (ngSubmit)="ingresar()" id="loginform" action="index.html">
+
+
+
+        <form ngNativeValidate #f="ngForm" class="form-horizontal form-material" (ngSubmit)="ingresar(f)" id="loginform"
+          action="index.html" autocomplete="off">
           <h3 class="box-title m-b-20">Inicio de Sesión</h3>
           <div class="form-group ">
             <div class="col-xs-12">
-              <input class="form-control" type="text" required="" placeholder="Usuario"> </div>
+              <input ngModel name="email" class="form-control" type="email" required placeholder="Email"> </div>
           </div>
           <div class="form-group">
             <div class="col-xs-12">
-              <input class="form-control" type="password" required="" placeholder="Contraseña"> </div>
+              <input ngModel name="password" class="form-control" type="password" required placeholder="Contraseña">
+            </div>
           </div>
           <div class="form-group row">
             <div class="col-md-12">
               <div class="checkbox checkbox-info pull-left p-t-0">
-                <input id="checkbox-signup" type="checkbox" class="filled-in chk-col-light-blue">
+                <input [(ngModel)]="recuerdame" name="recuerdame" id="checkbox-signup" type="checkbox"
+                  class="filled-in chk-col-light-blue">
                 <label for="checkbox-signup"> Recordarme </label>
               </div> <a href="javascript:void(0)" id="to-recover" class="text-dark pull-right"><i
                   class="fa fa-lock m-r-5"></i> ¿Olvidaste tu contraseña?</a>
@@ -29,16 +35,15 @@
           <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 m-t-10 text-center">
               <div class="social">
-                <a href="javascript:void(0)" class="btn  btn-facebook" data-toggle="tooltip"
-                  title="Login with Facebook"> <i aria-hidden="true" class="fa fa-facebook"></i> </a>
-                <a href="javascript:void(0)" class="btn btn-googleplus" data-toggle="tooltip" title="Login with Google">
-                  <i aria-hidden="true" class="fa fa-google-plus"></i> </a>
+                <button class="btn btn-googleplus" data-toggle="tooltip" id="btnGoogle" type="button">
+                  <i aria-hidden="true" class="fa fa-google-plus"></i>
+                </button>
               </div>
             </div>
           </div>
           <div class="form-group m-b-0">
             <div class="col-sm-12 text-center">
-              ¿No tienes una cuenta? <a href="#/register" class="text-info m-l-5"><b>Regístrate</b></a>
+              ¿No tienes una cuenta? <a routerLink="/register" class="text-info m-l-5"><b>Regístrate</b></a>
             </div>
           </div>
         </form>

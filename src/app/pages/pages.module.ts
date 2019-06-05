@@ -15,23 +15,23 @@ import { PromesasComponent } from './promesas/promesas.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
 
 @NgModule({
-    declarations: [
-        PagesComponent,
-        DashboardComponent,
-        ProgressComponent,
-        Graficas1Component,
-        IncrementadorComponent,
-        GraficoDonaComponent,
-        AccountSettingsComponent,
-        PromesasComponent,
-        RxjsComponent
-    ],
-    exports: [
-        PagesComponent,
-        DashboardComponent,
-        ProgressComponent,
-        Graficas1Component
-    ],
-    imports: [SharedModule, PAGES_ROUTES, FormsModule, ChartsModule]
+  declarations: [
+    PagesComponent,
+    DashboardComponent,
+    ProgressComponent,
+    Graficas1Component,
+    IncrementadorComponent,
+    GraficoDonaComponent,
+    AccountSettingsComponent,
+    PromesasComponent,
+    RxjsComponent
+  ],
+  exports: [
+    PagesComponent,
+    DashboardComponent,
+    ProgressComponent,
+    Graficas1Component
+  ],
+  imports: [SharedModule, PAGES_ROUTES, FormsModule, ChartsModule]
 })
 export class PagesModule {}
