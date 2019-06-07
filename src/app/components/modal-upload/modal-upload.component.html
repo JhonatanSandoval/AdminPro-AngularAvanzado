@@ -1,0 +1,28 @@
+<div class="fondo-negro animated fadeIn" [ngClass]="modalUploadService.oculto">
+   <div class="modal" style="display: block;" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title">Modificar imagen</h5>
+               <button type="button" class="close" (click)="cerrarModal()" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+               </button>
+            </div>
+            <div class="modal-body text-center">
+               <img *ngIf="!imagenTemp" [src]="'xxx' | imagen" alt="Foto del Usuario" class="w150">
+               <img *ngIf="imagenTemp" [src]="imagenTemp" alt="Foto del Usuario" class="w150">
+               <br>
+               <input type="file" (change)="seleccionImagen($event.target.files[0])">
+            </div>
+            <div class="modal-footer">
+               <button type="button" (click)="cerrarModal()" class="btn btn-secondary">
+                  Cancelar
+               </button>
+               <button [disabled]="!imagenTemp" (click)="subirImagen()" type="button" class="btn btn-primary">
+                  Subir imagen
+               </button>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
