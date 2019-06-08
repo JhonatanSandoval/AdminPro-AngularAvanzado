@@ -7,6 +7,8 @@ import { UsuarioService } from './usuario/usuario.service';
 import { LoginGuardGuard } from './guards/login-guard.guard';
 import { SubirArchivoService } from './subir-archivo/subir-archivo.service';
 import { ModalUploadService } from '../componentes/modal-upload/modal-upload.service';
+import { HospitalService } from './hospital/hospital.service';
+import { MedicoService } from './medico/medico.service';
 
 @NgModule({
     declarations: [],
@@ -16,6 +18,8 @@ import { ModalUploadService } from '../componentes/modal-upload/modal-upload.ser
         SidebarService,
         SharedService,
         UsuarioService,
+        HospitalService,
+        MedicoService,
         SubirArchivoService,
         LoginGuardGuard,
         ModalUploadService

@@ -18,35 +18,41 @@ import { ProfileComponent } from './profile/profile.component';
 import { CommonModule } from '@angular/common';
 import { UsuariosComponent } from './usuarios/usuarios.component';
 import { ModalUploadComponent } from '../components/modal-upload/modal-upload.component';
+import { HospitalesComponent } from './hospitales/hospitales.component';
+import { MedicosComponent } from './medicos/medicos.component';
+import { MedicoDetalleComponent } from './medicos/detalle.component';
 
 @NgModule({
-  declarations: [
-    PagesComponent,
-    DashboardComponent,
-    ProgressComponent,
-    Graficas1Component,
-    IncrementadorComponent,
-    GraficoDonaComponent,
-    AccountSettingsComponent,
-    PromesasComponent,
-    RxjsComponent,
-    ProfileComponent,
-    UsuariosComponent,
-    ModalUploadComponent
-  ],
-  exports: [
-    PagesComponent,
-    DashboardComponent,
-    ProgressComponent,
-    Graficas1Component
-  ],
-  imports: [
-    SharedModule,
-    PAGES_ROUTES,
-    FormsModule,
-    ChartsModule,
-    PipesModule,
-    CommonModule
-  ]
+    declarations: [
+        PagesComponent,
+        DashboardComponent,
+        ProgressComponent,
+        Graficas1Component,
+        IncrementadorComponent,
+        GraficoDonaComponent,
+        AccountSettingsComponent,
+        PromesasComponent,
+        RxjsComponent,
+        ProfileComponent,
+        UsuariosComponent,
+        ModalUploadComponent,
+        HospitalesComponent,
+        MedicosComponent,
+        MedicoDetalleComponent
+    ],
+    exports: [
+        PagesComponent,
+        DashboardComponent,
+        ProgressComponent,
+        Graficas1Component
+    ],
+    imports: [
+        SharedModule,
+        PAGES_ROUTES,
+        FormsModule,
+        ChartsModule,
+        PipesModule,
+        CommonModule
+    ]
 })
 export class PagesModule {}
