@@ -10,6 +10,7 @@ import { ModalUploadService } from '../componentes/modal-upload/modal-upload.ser
 import { HospitalService } from './hospital/hospital.service';
 import { MedicoService } from './medico/medico.service';
 import { AdminGuard } from './guards/admin.guard';
+import { VerificaTokenGuard } from './guards/verifica-token.guard';
 
 @NgModule({
     declarations: [],
@@ -24,7 +25,8 @@ import { AdminGuard } from './guards/admin.guard';
         SubirArchivoService,
         LoginGuardGuard,
         AdminGuard,
-        ModalUploadService
+        ModalUploadService,
+        VerificaTokenGuard
     ]
 })
 export class ServiceModule {}

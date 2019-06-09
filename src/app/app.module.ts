@@ -9,19 +9,26 @@ import { PagesModule } from './pages/pages.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ServiceModule } from './services/service.module';
 import { HttpClientModule } from '@angular/common/http';
+import { PagesComponent } from './pages/pages.component';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, RegisterComponent],
-  imports: [
-    BrowserModule,
-    APP_ROUTES,
-    PagesModule,
-    FormsModule,
-    ServiceModule,
-    ReactiveFormsModule,
-    HttpClientModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        LoginComponent,
+        RegisterComponent,
+        PagesComponent
+    ],
+    imports: [
+        BrowserModule,
+        APP_ROUTES,
+        FormsModule,
+        ServiceModule,
+        ReactiveFormsModule,
+        HttpClientModule,
+        SharedModule
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule {}

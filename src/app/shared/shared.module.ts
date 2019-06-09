@@ -7,20 +7,23 @@ import { NotfoundpageComponent } from '../notfoundpage/notfoundpage.component';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { PipesModule } from '../pipes/pipes.module';
+import { ModalUploadComponent } from '../components/modal-upload/modal-upload.component';
 
 @NgModule({
-  declarations: [
-    HeaderComponent,
-    SidebarComponent,
-    BreadcrumbsComponent,
-    NotfoundpageComponent
-  ],
-  exports: [
-    HeaderComponent,
-    SidebarComponent,
-    BreadcrumbsComponent,
-    NotfoundpageComponent
-  ],
-  imports: [RouterModule, CommonModule, PipesModule]
+    declarations: [
+        HeaderComponent,
+        SidebarComponent,
+        BreadcrumbsComponent,
+        NotfoundpageComponent,
+        ModalUploadComponent
+    ],
+    exports: [
+        HeaderComponent,
+        SidebarComponent,
+        BreadcrumbsComponent,
+        NotfoundpageComponent,
+        ModalUploadComponent
+    ],
+    imports: [RouterModule, CommonModule, PipesModule]
 })
 export class SharedModule {}
